@@ -17,7 +17,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 <body>
 
     <div class="login-card">
-        <form name="loginform" action="avascript:void(0); login_exec.php" method="post">
+        <form name="loginform" action="login_exec.php" method="post">
         <!-- <table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
             <tr>
                 <td colspan="2">
@@ -64,8 +64,8 @@ unset($_SESSION['SESS_LAST_NAME']);
 
         <h1>Log-in</h1><br>
         <form>
-          <input type="text" required value="" name="username" placeholder="Username">
-          <input type="password" required value="" name="password" placeholder="Password">
+          <input type="text" name="username" placeholder="Username">
+          <input type="password" name="password" placeholder="Password">
           <input type="submit" name="" class="login login-submit" value="login">
       </form>
 
