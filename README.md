@@ -1,7 +1,7 @@
 comp3013
 ========
 
-Database Coursework 1
+Database Coursework
 
 Team number: 8
 
