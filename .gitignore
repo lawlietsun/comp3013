@@ -5,4 +5,4 @@ app/tmp/*
 app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
-comp3013/connection.php
+connection.php
