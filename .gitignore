@@ -7,4 +7,4 @@ app/[Cc]onfig/database.php
 !empty
 
 */connection.php
-test.php
+*/test.php
