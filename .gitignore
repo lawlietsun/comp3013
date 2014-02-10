@@ -6,5 +6,10 @@ app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
 
+<<<<<<< HEAD
 connection.php
 test.php
+=======
+*/connection.php
+*/test.php
+>>>>>>> 3ca21d216424c0aba09cf9fc6dc843e67aa62cd8
