@@ -65,7 +65,7 @@ unset($_SESSION['SESS_LAST_NAME']);
         <h1>Log-in</h1><br>
         <form>
           <input type="text" name="username" placeholder="Username">
-          <input type="passwordrrrrrrrrrrrrrr" name="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Passwordeeeeeeee">
           <input type="submit" name="" class="login login-submit" value="login">
       </form>
 
