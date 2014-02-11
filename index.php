@@ -29,8 +29,6 @@ unset($_SESSION['SESS_LAST_NAME']);
                 }
                 ?>
 
-                <!-- ============================================================================================================ -->
-
                 <h1>Log-in</h1><br>
                 <form>
                     <input type="text" name="username" placeholder="Username">
