@@ -22,12 +22,12 @@ function clean($str)
 }
 
 //Sanitize the POST values
-$username = clean($_POST['username']);
+$email = clean($_POST['email']);
 $password = clean($_POST['password']);
 
 //Input Validations
-if ($username == '') {
-    $errmsg_arr[] = 'Username missing';
+if ($email == '') {
+    $errmsg_arr[] = 'email missing';
     $errflag = true;
 }
 if ($password == '') {
@@ -44,7 +44,7 @@ if ($errflag) {
 }
 
 //Create query
-$qry = "SELECT * FROM member WHERE username='$username' AND password='$password'";
+$qry = "SELECT * FROM member WHERE email='$email' AND password='$password'";
 $result = mysql_query($qry);
 
 //Check whether the query was successful or not
@@ -54,7 +54,7 @@ if ($result) {
         session_regenerate_id();
         $member = mysql_fetch_assoc($result);
         $_SESSION['SESS_MEMBER_ID'] = $member['mem_id'];
-        $_SESSION['SESS_FIRST_NAME'] = $member['username'];
+        $_SESSION['SESS_FIRST_NAME'] = $member['email'];
         $_SESSION['SESS_LAST_NAME'] = $member['password'];
         session_write_close();
         header("location: home.php");
