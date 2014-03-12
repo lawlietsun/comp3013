@@ -14,7 +14,7 @@ include('login_exec.php');
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 

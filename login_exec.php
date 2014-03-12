@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once('connection.php');
+require_once('db/connection.php');
 
 $message="";
 if(count($_POST)>0) {
