@@ -1,4 +1,4 @@
-comp301
+comp3013
 ========
 
 Database Coursework
@@ -6,6 +6,3 @@ Database Coursework
 Team number: 8
 
 Team member: Ruili Wang, Jiawei Long, Yue Sun
-
-
-a
