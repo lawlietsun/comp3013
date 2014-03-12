@@ -7,7 +7,7 @@ unset($_SESSION["email"]);
 unset($_SESSION["fname"]);
 unset($_SESSION["lname"]);
 
-include('login_exec.php');
+include('/login_exec.php');
 
 ?>
 
