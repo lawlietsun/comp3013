@@ -6,8 +6,6 @@ require_once('db/connection.php');
 
 $message="";
 if(count($_POST)>0) {
-    // $conn = mysql_connect("localhost","root","root");
-    // mysql_select_db("comp3013",$conn);
     $result = mysql_query("SELECT * FROM member WHERE email='" . $_POST["email"] . "' and password = '". $_POST["password"] ."'");
     $row  = mysql_fetch_array($result);
     if(is_array($row)) {
