@@ -1,9 +1,6 @@
 <?php 
 //making connection to database and table selection
 require_once("connection.php");
-// require_once("include/functions.php");
-//include the header
-// require("include/header.php");
 ?>
 <div id="prof2">
 

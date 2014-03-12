@@ -1,5 +1,5 @@
 <?php
-require_once('auth.php');
+session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -17,8 +17,6 @@ require_once('auth.php');
         -->
         </style>
     </head>
-
-<<<<<<< HEAD
 <body>
     
     <table width="398" border="0" align="center" cellpadding="0">
@@ -78,11 +76,4 @@ require_once('auth.php');
 <p align="center"><a href="search.php">Search</a></p>
 
 </body>
-=======
-    <body>
-        <p align="center" class="style1">Login successfully </p>
-
-        <p align="center"><a href="index.php">logout</a></p>
-    </body>
->>>>>>> develop
 </html>
