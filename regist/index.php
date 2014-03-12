@@ -1,20 +1,26 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="login-card">
-    <h1>Register</h1>
-    <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post">
+    <h1>register</h1>
+    <form name="reg" action="code_exec.php" method="post">
       <tr>
         <td>       
           <div>
             <?php 
+ 
             $remarks = "";
             if ( isset($_GET['remarks']) ) 
             {
               $remarks = $_GET['remarks'];
+            }
+
+            if ($remarks == 'email')
+            {
+              echo 'this email has been registrated';
             }
 
             if ( $remarks == 'success' ) 
@@ -22,7 +28,7 @@
               echo 'Registration Success';
             }
 
-            if ( $remarks == 'incorrect' ) 
+            if ( $remarks == 'passwordsincorrect' ) 
             {
               echo 'Passwords inconsistent';
             }
@@ -43,7 +49,7 @@
       </form>
 
       <div class="login-help">
-        <a href="/index.php">Already had an account</a>
+        <a href="/test/index.php">Already had an account</a>
       </div>
     </form>
   </div>
