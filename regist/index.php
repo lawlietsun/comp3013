@@ -1,7 +1,7 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title>Register</title>
 </head>
 <body>
@@ -50,7 +50,7 @@
       </form>
 
       <div class="login-help">
-        <a href="/test/index.php">Already had an account</a>
+        <a href="/index.php">Already had an account</a>
       </div>
     </form>
   </div>
