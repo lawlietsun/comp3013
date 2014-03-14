@@ -24,7 +24,7 @@ if(!empty($_POST))
 	$confirmpassword=$_POST['confirmpassword'];
 	/*
 
-	我加的东西
+	我加的东西2
 
 	*/
 	
