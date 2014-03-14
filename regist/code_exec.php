@@ -22,6 +22,11 @@ if(!empty($_POST))
 	$age = $_POST['age'];
 	$creatpassword=$_POST['creatpassword'];
 	$confirmpassword=$_POST['confirmpassword'];
+	/*
+
+	我加的东西
+
+	*/
 	
 	$result = mysql_query("SELECT email FROM member WHERE email = '$email'");
 	$rownumber = mysql_num_rows($result);
