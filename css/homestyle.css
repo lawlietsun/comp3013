@@ -1,0 +1,161 @@
+/*@padding: 200px;
+
+@bg_color: #eee;
+@key_color: #262727;
+@alt_color: #1d1d1d;
+@accent_color: #86bf24;
+@font_color: #FFF;
+@alt_font_color: #66d4ff;*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.opacity(@opacity: 100)
+{
+  opacity:@opacity/100;
+  -moz-opacity:@opacity/100;
+  -khtml-opacity:@opacity/100;
+  filter:alpha(opacity=@opacity);
+}
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+
+html
+{
+  height: 100%;
+}
+body
+{
+  width: 100%;
+  height: 100%;
+}
+
+#cover
+{
+  width: 100%;
+  height: 100%;
+  
+  position: fixed;
+  top: 0px;
+  
+  background: url('https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-guitar.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+  
+}
+
+.info_block
+{
+  margin: 200px 20px;
+  background: #FFF;
+  min-height: 200px;
+  padding: 10px 20px 30px;
+  position: relative;
+  
+  float: left;
+  
+  .opacity(70);
+  .rounded-corners(20px);
+}
+
+.info_block h2
+{
+  color: #86bf24;
+  
+}
+
+.type
+{
+  font-weight: bold;
+}
+
+#header
+{
+  background: #4d90fe;
+  height:50px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  text-align: center; 
+  z-index: 100;
+  margin:0px;
+  padding: 0px;
+}
+
+ul#main_menu
+{ 
+  list-style-type: none;
+  width: 100%;
+  margin: 0xp;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  
+}
+
+ul#main_menu li
+{ 
+  position: relative;
+  top: -15px;
+  display:inline-block;
+  margin: 0px 5px; 
+  cursor: pointer;
+  padding: 13px 25px;
+  color: #FFF;
+}
+
+ul#main_menu li:hover
+{
+  color: #86bf24;
+  background: #357ae8;
+}
+
+ul#main_menu li.selected
+{
+  color: #FFF;
+  background: #357ae8;
+}
+
+#codepen-footer
+{
+  display: none !important;
+}
+
+
+.link a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.head {
+top: -15px;
+padding: 50px 600px;
+
+}
+
+.info {
+top: -15px;
+padding: 20px 950px;
+width: 300px;
+height: 10%;
+margin: -250px 00px;
+}

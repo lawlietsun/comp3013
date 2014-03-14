@@ -6,6 +6,9 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+
     <title>
         <?php
         echo $_SESSION["fname"];
@@ -14,70 +17,47 @@ session_start();
         echo "'s Home Page"
         ?>
     </title>
-    <style type="text/css">
-    .style1 {
-        font-size: 36px;
-        font-weight: bold;
-    }
-    </style>
 </head>
 <body>
-    
-    <table width="398" border="0" align="center" cellpadding="0">
-      <tr>
-        <td height="26" colspan="2">Your Profile Information </td>
-        <td>
-            <div align="right"><a href="index.php">logout</a></div>
-        </td>
-    </tr>
-    <tr>
-        <td width="129" rowspan="5">
-            <img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="129" height="129" alt="no image found"/>
-        </td>
-        <td width="82" valign="top">
-            <div align="left">FirstName:</div>
-        </td>
-        <td width="165" valign="top">
-            <?php 
-            echo $_SESSION["fname"] 
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td valign="top">
-            <div align="left">LastName:</div>
-        </td>
-        <td valign="top">
-            <?php 
-            echo $_SESSION["lname"] 
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td valign="top">
-            <div align="left">Gender:</div>
-        </td>
-        <td valign="top">
-            <?php 
-            echo $gender 
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td valign="top">
-            <div align="left">Age:</div>
-        </td>
-        <td valign="top">
-            <?php 
-            echo $_SESSION["age"] 
-            ?>
-        </td>
-    </tr>
 
-</table>
+    <div id="cover">
 
-<p align="center"><a href="/setpic.php">Upload pic</a></p>
-<p align="center"><a href="/search.php">Search</a></p>
+        <div id="header" class="link">
+          <ul id="main_menu">
+            <li class="selected"><a href="home.php" title="home">Home</a></li>
+            <li><a href="friends.php" title="Friends">Friends</a></li>
+            <li><a href="activity.php" title="activity">Activity</a></li>
+            <li><a href="search.php" title="search">Search</a></li>
+            <li><a href="/index.php" title="logout">Log Out</a></li>
+        </ul>
 
+    </div>
+
+    <div class="head">             
+        <a href="/setpic.php"><img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/></a>
+    </div>
+
+    <div class="info">
+        <h>FirstName:</h>
+        <?php 
+        echo $_SESSION["fname"] 
+        ?>
+
+        <h>LastName:</h>
+        <?php 
+        echo $_SESSION["lname"] 
+        ?>
+        <br/>
+        <h>Gender:</h>
+        <?php 
+        echo $_SESSION["gender"] 
+        ?>
+        <br/>
+        <h>Age:</h>
+        <?php 
+        echo $_SESSION["age"] 
+        ?>
+    </div>
+</div>
 </body>
 </html>
