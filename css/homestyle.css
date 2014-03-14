@@ -1,17 +1,8 @@
-/*@padding: 200px;
-
-@bg_color: #eee;
-@key_color: #262727;
-@alt_color: #1d1d1d;
-@accent_color: #86bf24;
-@font_color: #FFF;
-@alt_font_color: #66d4ff;*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 
 body {
   font-family: 'Roboto', sans-serif;
 }
-
 
 .opacity(@opacity: 100)
 {
@@ -28,8 +19,6 @@ body {
   -o-border-radius: @radius;
   border-radius: @radius;
 }
-
-
 
 html
 {
@@ -135,7 +124,6 @@ ul#main_menu li.selected
 {
   display: none !important;
 }
-
 
 .link a {
   text-decoration: none;
