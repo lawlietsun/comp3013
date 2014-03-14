@@ -27,6 +27,10 @@ if(!empty($_POST))
 	$rownumber = mysql_num_rows($result);
 	if ($rownumber > 0)
 	{
+		header("location: index.php?remarks=email");
+	}
+	else
+	{
 		if ($creatpassword == $confirmpassword)
 		{
 			try 
@@ -52,10 +56,6 @@ if(!empty($_POST))
 			header("location: index.php?remarks=passwordsincorrect");
 		}
 	}
-	else
-	{
-		header("location: index.php?remarks=email");
-	}
-	
+
 }
 ?>
