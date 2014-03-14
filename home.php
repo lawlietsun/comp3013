@@ -32,31 +32,32 @@ session_start();
         </ul>
 
     </div>
+    <div class="allinfo">
+        <div class="head">             
+            <a href="/setpic.php"><img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/></a>
+        </div>
 
-    <div class="head">             
-        <a href="/setpic.php"><img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/></a>
-    </div>
+        <div class="info">
+            <h>FirstName:</h>
+            <?php 
+            echo $_SESSION["fname"] 
+            ?>
 
-    <div class="info">
-        <h>FirstName:</h>
-        <?php 
-        echo $_SESSION["fname"] 
-        ?>
-
-        <h>LastName:</h>
-        <?php 
-        echo $_SESSION["lname"] 
-        ?>
-        <br/>
-        <h>Gender:</h>
-        <?php 
-        echo $_SESSION["gender"] 
-        ?>
-        <br/>
-        <h>Age:</h>
-        <?php 
-        echo $_SESSION["age"] 
-        ?>
+            <h>LastName:</h>
+            <?php 
+            echo $_SESSION["lname"] 
+            ?>
+            <br/>
+            <h>Gender:</h>
+            <?php 
+            echo $_SESSION["gender"] 
+            ?>
+            <br/>
+            <h>Age:</h>
+            <?php 
+            echo $_SESSION["age"] 
+            ?>
+        </div>
     </div>
 </div>
 </body>
