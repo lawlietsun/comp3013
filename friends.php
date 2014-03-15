@@ -10,6 +10,7 @@
   <div id="header" class="link">
     <ul id="main_menu">
       <li><a href="home.php" title="home">Home</a></li>
+      <li><a href="profile.php" title="Profile">Profile</a></li>
       <li class="selected"><a href="friends.php" title="Friends">Friends</a></li>
       <li><a href="activity.php" title="activity">Activity</a></li>
       <li><a href="search.php" title="search">Search</a></li>
