@@ -46,13 +46,3 @@ else
 	echo "<a href=\"login.php\">login to continue</a>";
 }
 ?>
-<html>
-<title></title>
-<body>
-	<div>
-		<form action="home.php" method="post" enctype="multipart/form-data">
-		<input class="send" type="submit" name="Submit" value="Go Home">
-	</form>
-	</div>
-</body>
-</html>
