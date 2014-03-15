@@ -27,7 +27,7 @@
 // 	我加的东西2
 
 // 	*/
-	
+
 // 	$result = mysql_query("SELECT email FROM member WHERE email = '$email'");
 // 	$rownumber = mysql_num_rows($result);
 // 	if ($rownumber > 0)
@@ -74,32 +74,29 @@
 
 
 session_start();
-// include('db/connection.php');
+include('db/connection.php');
 
-$mysql_hostname = "eu-cdbr-azure-west-b.cloudapp.net";
-$mysql_user = "b0be1b17ba7186";
-$mysql_password = "62ebd3b9";
-$mysql_database = "comp301A7bEecu9x";
-
-// $mysql_hostname = "localhost";
-// $mysql_user = "root";
-// $mysql_password = "root";
-// $mysql_database = "comp3013";
-
-$prefix = "";
-$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
-mysql_select_db($mysql_database, $bd) or die("Could not select database");
-
-
-$fname=$_POST['fname'];
-$lname=$_POST['lname'];
-$age=$_POST['age'];
-$password=$_POST['creatpassword'];
-// mysql_query("INSERT INTO member(fname, lname, password)VALUES('$fname', '$lname', '$password')");
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$email = $_POST['email'];
+$age = $_POST['age'];
+$creatpassword=$_POST['creatpassword'];
+$confirmpassword=$_POST['confirmpassword'];
 $usrid = $_SESSION["mem_id"];
-mysql_query("UPDATE member SET fname=$fname, lname=$lname, age=$age, password=$creatpassword WHERE mem_id=$usrid");
+// echo $usrid;
 
-// header("location: index.php?remarks=success");
+// mysql_query("UPDATE member SET fname='111', lname='222', age='323', password='33' WHERE mem_id='661'");
+    	 	// Insert data
+if($creatpassword != $confirmpassword){
+	header("location: profile.php?remarks=passwordsincorrect");
+}
+else{
+	$password = sha1($_POST['creatpassword']);
+	mysql_query("UPDATE member SET fname='$fname', lname='$lname', age='$age', password='$password' WHERE mem_id=$usrid");
+	header("location: profile.php?remarks=success");
+}
+// mysql_query("INSERT INTO member(fname, lname, age, email, password)VALUES('q', 'q', 'q', 'q', 'q')");
+
 mysql_close($bd);
 
 

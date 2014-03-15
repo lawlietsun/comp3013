@@ -6,7 +6,7 @@ require_once("db/connection.php");
 <div id="">
 
 	<?php
-	echo "You are logged in with user id {$_SESSION[mem_id]}<br/>";
+	echo "Hello {$_SESSION[fname]} {$_SESSION[fname]} please upload a photo<br/>";
 	?>
 	<form class="email" action="processpic.php" method="post" enctype="multipart/form-data">
 		<input name="file" id="file" type="file"/>

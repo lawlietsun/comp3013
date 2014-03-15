@@ -36,9 +36,9 @@ session_start();
     <div class="allinfo">
         <div class="head">             
             <a href="/setpic.php"><img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/></a>
-        </div>
+        <!-- </div> -->
 
-        <div class="info">
+        <!-- <div class="info"> -->
             <h>FirstName:</h>
             <?php 
             echo $_SESSION["fname"] 
