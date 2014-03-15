@@ -1,4 +1,4 @@
-<html>
+
 <?php
 require('db/connection.php');
 session_start();
@@ -46,6 +46,6 @@ else
 	echo "<a href=\"login.php\">login to continue</a>";
 }
 ?>
-
+<html>
 <a href="home.php">Go Home</a>
 </html>
