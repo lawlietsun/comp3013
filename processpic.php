@@ -49,8 +49,10 @@ else
 <html>
 <title></title>
 <body>
-<div>
-<a href="home.php">Go Home</a>
-</div>
+	<div>
+		<form action="home.php" method="post" enctype="multipart/form-data">
+		<input class="send" type="submit" name="Submit" value="Go Home">
+	</form>
+	</div>
 </body>
 </html
