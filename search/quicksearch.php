@@ -2,7 +2,7 @@
 	<table class="table table-bordered">
 		<tbody>
 			<?php
-			include('config.php');
+			include('../db/connection.php');
 			$count= 0;
 			$key =  $_POST['key'];
 			$key = addslashes($key);

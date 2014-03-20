@@ -37,7 +37,7 @@ include('login_exec.php');
             </form>
 
             <div class="login-help">
-                <a href="/regist/index.php">Register</a> • <a href="#">Forgot Password</a>
+                <a href="/regist/index.php">Register</a>
             </div>
         </form>
     </div>

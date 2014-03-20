@@ -83,10 +83,7 @@ $age = $_POST['age'];
 $creatpassword=$_POST['creatpassword'];
 $confirmpassword=$_POST['confirmpassword'];
 $usrid = $_SESSION["mem_id"];
-// echo $usrid;
 
-// mysql_query("UPDATE member SET fname='111', lname='222', age='323', password='33' WHERE mem_id='661'");
-    	 	// Insert data
 if($creatpassword != $confirmpassword){
 	header("location: profile.php?remarks=passwordsincorrect");
 }
@@ -95,7 +92,6 @@ else{
 	mysql_query("UPDATE member SET fname='$fname', lname='$lname', age='$age', password='$password' WHERE mem_id=$usrid");
 	header("location: profile.php?remarks=success");
 }
-// mysql_query("INSERT INTO member(fname, lname, age, email, password)VALUES('q', 'q', 'q', 'q', 'q')");
 
 mysql_close($bd);
 
