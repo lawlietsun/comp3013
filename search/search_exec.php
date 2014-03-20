@@ -11,23 +11,26 @@ if(count($_POST)>0)
     ?>
     <div class=userlist>
         <?php
-    if($rownumber > 0)
-    {
-        // header("Location: index.php?remarks=match");
-        while($rownumber = mysql_fetch_array($result))
+        if($rownumber > 0)
         {
-            echo $rownumber['fname'];
-            echo " ";
-            echo $rownumber['lname']."<br />";
+        // header("Location: index.php?remarks=match");
+            while($rownumber = mysql_fetch_array($result))
+            {
+                echo $rownumber['fname'];
+                echo " ";
+                echo $rownumber['lname'];
+                $found_mem_id = $rownumber['mem_id'];
+
+                echo "<a href='addfriends.php?found_mem_id=$found_mem_id'>     Add a new friend</a>"."<br />";
+            }
         }
-    }
-    else
-    {
+        else
+        {
         // header("Location: index.php?remarks=unmatch");
-        echo "not found";
-    }
-    ?>
-</div>
-<?php
+            echo "not found";
+        }
+        ?>
+    </div>
+    <?php
 }
 ?>
