@@ -46,7 +46,7 @@ include('../db/connection.php');
 									$friend_id = $row['mem_id'];
 									// echo $friend_id;
 									$user_id = $friend_id;
-									echo "<a href='ffriends.php?user_id=$user_id'>'s friends</a>";
+									echo "<a href='ffriends.php?user_id=$user_id'>  View friends</a>";
 									?>
 								</td>
 							</tr>
