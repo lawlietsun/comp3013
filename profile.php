@@ -25,7 +25,7 @@ session_start();
 
 
   <div class="info_block">
-    <h2>Profile</h2>
+    <h1>Profile</h1>
 
 
     <!-- <div style="width: 700px;"> -->
