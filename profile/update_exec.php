@@ -74,7 +74,7 @@
 
 
 session_start();
-include('db/connection.php');
+include('../db/connection.php');
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
