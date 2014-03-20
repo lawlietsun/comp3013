@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <?php
-session_start();
+// session_start();
 
 include('index.php');
 
