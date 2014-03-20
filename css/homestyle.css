@@ -44,7 +44,7 @@ body
   -o-background-size: cover;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
--ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
   
 }
 
@@ -60,6 +60,8 @@ body
   
   .opacity(70);
   .rounded-corners(20px);
+  top: -160;
+  left: 300;
 }
 
 .info_block h2
@@ -135,17 +137,17 @@ ul#main_menu li.selected
 }
 
 .head {
-top: -15px;
-padding: 50px 600px;
+  top: -15px;
+  padding: 50px 600px;
 
 }
 
 .info {
-top: -15px;
-padding: 20px 950px;
-width: 300px;
-height: 10%;
-margin: -250px 00px;
+  top: -15px;
+  padding: 20px 950px;
+  width: 300px;
+  height: 10%;
+  margin: -250px 00px;
 }
 
 .allinfo{
