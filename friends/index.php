@@ -21,7 +21,7 @@ include('../db/connection.php');
 						<?php
 						$mem_id = $_SESSION['mem_id'];
 						// echo $mem_id;
-						$query=mysql_query("SELECT * from member where mem_id in (select friend_id from friends where mem_id = $mem_id)")or die(mysql_error());
+						$query=mysql_query("SELECT * from member where mem_id in (select friend_id from friend where mem_id = $mem_id)")or die(mysql_error());
 						while($row=mysql_fetch_array($query)){
 							?>
 							<tr>
