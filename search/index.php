@@ -1,52 +1,50 @@
-<html>
-<?php 
-include('head.php');
+<?php
+//Start session
+session_start();
+//Unset the variables stored in session
+// unset($_SESSION["mem_id"]);
+// // unset($_SESSION["email"]);
+// unset($_SESSION["fname"]);
+// unset($_SESSION["lname"]);
+
+// include('login_exec.php');
+
 ?>
+
+<html lang="en-US">
+<head>
+    <!--     <meta charset="utf-8"> -->
+<!--     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/logo/logo.png"> -->
+    <title>Search Friends</title>
+</head>
 <body>
-	<br>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="span4">
-				<div class="alert alert-info">
-					Search User to search box
-				</div>
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th>All Users</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-						$query=mysql_query("select * from member")or die(mysql_error());
-						while($row=mysql_fetch_array($query)){
-						?>
-							<tr>
-								<td>
-									<!-- <i class="icon-book"></i>&nbsp; -->
-									<?php 
-									echo $row['fname'];
-									echo " ";
-									echo $row['lname'];
-									?>
-								</td>
-							</tr>
-						<?php 
-						} 
-						?>
-					</tbody>
-				</table>
-			</div>
-			<div class="span8">
-				<div class="hero-unit-2">
-					<form>
-						<input placeholder="Quick Search" class="input-large search-query" type="text" id="key" >
-						<div class="result"><div class="loading"></div></div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+    <h1>Search Friends</h1>
+
+    <form name="searchform" action="search_exec.php" method="post"> 
+      <form>
+        <input type="text" name="name" placeholder="name" required="">
+        <button type="submit">Search Friends</button>
+    </form>
+    <?php 
+
+    $remarks = "";
+    if ( isset($_GET['remarks']) ) 
+    {
+      $remarks = $_GET['remarks'];
+  }
+
+  if ($remarks == 'match')
+  {
+    echo 'results';
+  }
+
+if ( $remarks == 'unmatch' ) 
+{
+    echo 'Not Found';
+}
+?> 
+</form>
 </body>
 </html>
+
