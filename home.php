@@ -65,11 +65,11 @@ include('db/connection.php');
                 ?>
                 <!-- <img src="<?php echo "upload/{$row['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/> -->
                 <?php
-                echo "</br>";
+                // echo "</br>";
                 echo "FirstName : ".$row['fname'];
-                echo " ";
+                echo "</br>";
                 echo "LastName : ".$row['lname'];
-                echo " : ";
+                echo "</br>";
                 echo "Age : ".$row['age'];
             }
                 ?>
