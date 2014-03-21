@@ -10,7 +10,8 @@ $target_circles_name = $_GET['target_circles_name'];
     $rownumber = mysql_num_rows($result);
 
     ?>
-    <div class=userlist>
+    <div class="userlist">
+        <h1> Friends in this circle</h1>
         <?php
 
         if($rownumber > 0)
