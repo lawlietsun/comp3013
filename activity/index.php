@@ -34,7 +34,7 @@ include('act_exec.php');
         <button type="submit">Post</button>
       </form>
       <?php
-      session_start();
+      // session_start();
 
       include('../db/connection.php');
 

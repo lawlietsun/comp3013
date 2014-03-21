@@ -19,9 +19,21 @@ if(count($_POST)>0)
                 echo $rownumber['fname'];
                 echo " ";
                 echo $rownumber['lname'];
-                $found_mem_id = $rownumber['mem_id'];
 
+                $found_mem_id = $rownumber['mem_id'];
+                $mem_id = $_SESSION['mem_id'];
+
+                $result1 = mysql_query("SELECT * FROM friend WHERE mem_id = '$mem_id' and friend_id ='$found_mem_id'");
+                $rownumber1 = mysql_num_rows($result1);
+
+                if($rownumber1 > 0)
+                {
+                echo ''."<br />";
+                }
+                else
+                {
                 echo "<a href='addfriends.php?found_mem_id=$found_mem_id'>     Add a new friend</a>"."<br />";
+                }
             }
         }
         else
