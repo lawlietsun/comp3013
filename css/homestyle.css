@@ -50,7 +50,7 @@ body
 
 .info_block
 {
-  margin: 200px 20px;
+ /* margin: 200px 20px;
   background: #FFF;
   min-height: 200px;
   padding: 10px 20px 30px;
@@ -62,6 +62,16 @@ body
   .rounded-corners(20px);
   top: -160;
   left: 300;
+  */
+
+
+  margin-left: auto;
+margin-right: auto;
+width: 600px;
+padding: 100px;
+position: relative;
+/*float: left;*/
+top: -50px;
 }
 
 .info_block h2
@@ -151,5 +161,35 @@ ul#main_menu li.selected
 }
 
 .allinfo{
-  margin: 0px auto 10px;
+  /*border: 2px solid gray;*/
+  padding: 100px 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  position: relative;
+  top: 80px;
+}
+.pic{
+  /*padding: 56px;*/
+  /*border: 1px solid rgb(128, 128, 128);*/
+  position: relative;
+  margin-left: -250px;
+  top: auto;
+  bottom: 80px;
+  width: 90px;
+}
+.info{
+ /*border: 1px solid rgb(128, 128, 128);*/
+ width: 300px;
+ position: relative;
+ padding: 10px;
+ top: -200px;
+ margin-top: auto;
+}
+.activity{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  top: 80px;
 }
