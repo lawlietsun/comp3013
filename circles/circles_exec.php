@@ -10,8 +10,5 @@ if(count($_POST)>0)
     mysql_query("INSERT INTO circles(owner_id, circles_name)VALUES('$owner_id', '" . $_POST["circles_name"] . "')");
     echo "successful created a circle";
     mysql_close($bd);
-
-
-
 }
 ?>
