@@ -85,12 +85,12 @@ $confirmpassword=$_POST['confirmpassword'];
 $usrid = $_SESSION["mem_id"];
 
 if($creatpassword != $confirmpassword){
-	header("location: profile.php?remarks=passwordsincorrect");
+	header("location: index.php?remarks=passwordsincorrect");
 }
 else{
 	$password = sha1($_POST['creatpassword']);
 	mysql_query("UPDATE member SET fname='$fname', lname='$lname', age='$age', password='$password' WHERE mem_id=$usrid");
-	header("location: profile.php?remarks=success");
+	header("location: index.php?remarks=success");
 }
 
 mysql_close($bd);

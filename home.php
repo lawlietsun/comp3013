@@ -37,24 +37,41 @@ include('db/connection.php');
                 <a href="/setpic.php"><img src="<?php echo "upload/{$_SESSION['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/></a>
             </div>
             <div class="info">
-                <h>FirstName:</h>
+                <!-- <h>FirstName:</h> -->
                 <?php 
-                echo $_SESSION["fname"] 
+                // echo $_SESSION["fname"] 
                 ?>
 
-                <h>LastName:</h>
+                <!-- <h>LastName:</h> -->
                 <?php 
-                echo $_SESSION["lname"] 
+                // echo $_SESSION["lname"] 
                 ?>
-                <br/>
-                <h>Gender:</h>
+                <!-- <br/> -->
+                <!-- <h>Gender:</h> -->
                 <?php 
-                echo $_SESSION["gender"] 
+                // echo $_SESSION["gender"] 
                 ?>
-                <br/>
-                <h>Age:</h>
+                <!-- <br/> -->
+                <!-- <h>Age:</h> -->
                 <?php 
-                echo $_SESSION["age"] 
+                // echo $_SESSION["age"] 
+                ?>
+
+
+                <?php
+                    $myid = $_SESSION['mem_id'];
+            $q = mysql_query("SELECT * from member where mem_id = $myid")or die(mysql_error());
+            while($row=mysql_fetch_array($q)){
+                ?>
+                <!-- <img src="<?php echo "upload/{$row['mem_id']}.png" ?>" width="230" height="230" alt="no image found"/> -->
+                <?php
+                echo "</br>";
+                echo "FirstName : ".$row['fname'];
+                echo " ";
+                echo "LastName : ".$row['lname'];
+                echo " : ";
+                echo "Age : ".$row['age'];
+            }
                 ?>
             </div>
         </div>
