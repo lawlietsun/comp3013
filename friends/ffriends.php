@@ -12,6 +12,7 @@ $user_id = $_GET['user_id'];
 ?>
 <!-- <div class="info_block"> -->
 <div class='friendinfo'>
+	<h1>Friend List of friend</h1>
 	<?php
 	$query=mysql_query("SELECT * from member where mem_id in (select friend_id from friend where mem_id = $user_id)")or die(mysql_error());
 	while($row=mysql_fetch_array($query)){
