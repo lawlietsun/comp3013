@@ -48,4 +48,6 @@ else
 
 echo "<a href=\"home.php\">login to continue</a>";
 
+echo"<a href='index.php'>  gogogo</a>";
+
 ?>
