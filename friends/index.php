@@ -43,7 +43,7 @@ include('../db/connection.php');
 									// echo $friend_id;
 				$user_id = $friend_id;
 				echo "<a href='ffriends.php?user_id=$user_id'>  View friends</a>";			
-				echo "<a href='addtocircles.php?friend_id=$friend_id'>  Add to a circle</a>";
+				echo "<a href='addtocircle.php?friend_id=$friend_id'>  Add to a circle</a>";
 				echo "</br>";
 				?>
 
