@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('db/connection.php');
+include('../db/connection.php');
 
 $friend_id=$_SESSION["mem_id"];
 $activity=$_POST['activity'];
