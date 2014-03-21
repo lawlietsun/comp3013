@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <link rel="stylesheet" type="text/css" href="../css/homestyle.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/homestyle.css">
 
 <?php
 // session_start();
