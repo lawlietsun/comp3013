@@ -21,8 +21,8 @@ a{
 
 .add{
 position: relative;
-margin-left: auto;
-margin-right: auto;
-left: 900px;
+margin-left: 10px;
+margin-right: 1000px;
+left: 0px;
 top: -100px;
 }
