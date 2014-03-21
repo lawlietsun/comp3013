@@ -25,13 +25,15 @@ include('circles_exec.php');
 			<li><a href="/home.php" title="home">Home</a></li>
 			<li><a href="/profile/index.php" title="Profile">Profile</a></li>
 			<li><a href="/friends/index.php" title="Friends">Friends</a></li>
-			<li><a href="/activity.php" title="activity">Activity</a></li>
-			<li class="selected"><a href="index.php" title="search">Search</a></li>
+			<li><a href="/activity/index.php" title="activity">Activity</a></li>
+			<li class="selected"><a href="index.php" title="circles">Circles</a></li>
+			<li><a href="/search/index.php" title="search">Search</a></li>
 			<li><a href="/index.php" title="logout">Log Out</a></li>
 		</ul>
 
 	</div>
-</br>
+<!-- </br> -->
+<div class="info_block">
 <h1>Circles</h1>
 
 <form name="circleform" action="" method="post"> 
@@ -43,14 +45,14 @@ include('circles_exec.php');
 
 	<div class='friend'>
 		<div class="container">
-			<div class="row">
+<!-- 			<div class="row">
 				<div class="span4">
 					<table class="table table-bordered">
 						<thead>
-							<tr>
+							<tr> -->
 								<th>My Circles</th>
-							</tr>
-						</thead>
+<!-- 							</tr>
+						</thead> -->
 						<tbody>
 							<?php
 							$owner_id = $_SESSION['mem_id'];
@@ -80,15 +82,15 @@ include('circles_exec.php');
 								echo "You dont have any circle. Please create a circle.";
 							}
 							?>
-						</tbody>
-					</table>
+<!-- 						</tbody>
+					</table> -->
 				</div>
 
 			</div>
-		</div>
-	</div>
+<!-- 		</div>
+	</div> -->
 </div>
-
+</div>
 
 
 </form>

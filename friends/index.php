@@ -13,6 +13,7 @@ include('../db/connection.php');
 				<li><a href="/profile/index.php" title="Profile">Profile</a></li>
 				<li class="selected"><a href="index.php" title="Friends">Friends</a></li>
 				<li><a href="/activity/index.php" title="activity">Activity</a></li>
+				<li><a href="/circles/index.php" title="circles">Circles</a></li>
 				<li><a href="/search/index.php" title="search">Search</a></li>
 				<li><a href="/index.php" title="logout">Log Out</a></li>
 			</ul>
