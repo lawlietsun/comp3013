@@ -31,10 +31,11 @@ include('search_exec.php');
       <li class="selected"><a href="index.php" title="search">Search</a></li>
       <li><a href="/index.php" title="logout">Log Out</a></li>
     </ul>
-
   </div>
-</br>
+
+<div class="info_block">
 <h1>Search Friends</h1>
+
 
 <form name="searchform" action="" method="post"> 
   <form>
@@ -60,6 +61,8 @@ include('search_exec.php');
   // }
   ?> 
 </form>
+
+</div>
 </body>
 </html>
 

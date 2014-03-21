@@ -18,28 +18,22 @@ include('../db/connection.php');
 			</ul>
 		</div>
 	</div>
-	<br>
-	<br>
-	<div class='friend'>
-		<div class="container">
+<!-- 	<br>
+	<br> -->
+	<!-- <div class='friend'> -->
+		<!-- <div class="container"> -->
+			<div class="info_block">
 			<div class="row">
-				<div class="span4">
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>My Friends</th>
-							</tr>
-						</thead>
-						<tbody>
+				<!-- <div class="span4"> -->
+					<!-- <table class="table table-bordered"> -->
+						<h1>My friends</h1>
+						<!-- <tbody> -->
 							<?php
 							$mem_id = $_SESSION['mem_id'];
 						// echo $mem_id;
 							$query=mysql_query("SELECT * from member where mem_id in (select friend_id from friend where mem_id = $mem_id)")or die(mysql_error());
 							while($row=mysql_fetch_array($query)){
-								?>
-								<tr>
-									<td>
-										<?php 
+							
 										echo $row['fname'];
 										echo " ";
 										echo $row['lname'];
@@ -53,19 +47,18 @@ include('../db/connection.php');
 										Message:<input type='text' name='message' />
 
 										<?php
-										echo "</br>";
+										// echo "</br>";
 										echo "<a href='../msg/index.php?user_id=$user_id'>  Sent message</a>";
-										?>
-									</td>
-								</tr>
-								<?php 
+										echo "</br></br>";
+										
 							} 
 							?>
-						</tbody>
-					</table>
-				</div>
+						<!-- </tbody> -->
+					<!-- </table> -->
+				<!-- </div> -->
 
-			</div>
+			<!-- </div> -->
+		<!-- </div> -->
 		</div>
 	</div>
 </div>
