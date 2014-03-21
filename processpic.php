@@ -45,4 +45,7 @@ else
 {
 	echo "<a href=\"login.php\">login to continue</a>";
 }
+
+echo "<a href=\"home.php\">login to continue</a>";
+
 ?>
