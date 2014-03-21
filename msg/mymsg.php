@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../db/connection.php');
 ?>
 
 <h1>My Messages:</h1>
@@ -7,12 +8,19 @@ session_start();
 	<tbody>
 		<?php
 			$user = $_SESSION['mem_id']; //$user = $_SESSION['username'];
-			$qu = mysqli_query($con, "SELECT * FROM `messages` WHERE `to`='$user'");
-			if (mysqli_num_rows($qu) > 0) {
-				while ($row = mysqli_fetch_array($qu)) {
-					echo '<tr><td>'.$row["from"].'</td><td>'.$row["message"].'</td></tr>';
+			// echo "$user";
+			$qu = mysql_query("SELECT * from messages where touser = $user");
+			$qu = mysql_query("SELECT fname, lname, message from member, messages where mem_id = (SELECT fromuser from messages where touser = 831)");
+			// if (mysql_num_rows($qu) > 0) {
+				while ($row = mysql_fetch_array($qu)) {
+					echo $row["fname"];
+
+					echo " ".$row["lname"]." has sent you : </br>";
+
+
+					echo $row["message"];
 				}
-			}
+			// }
 		?>
 	</tbody>
 </table>
