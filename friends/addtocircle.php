@@ -16,19 +16,20 @@ while($datarow=mysql_fetch_array($data))
 }
 
 $result = mysql_query("SELECT * FROM circles WHERE owner_id = '$owner_id' group by circles_name");
-// $rownumber = mysql_num_rows($result);
-// if($rownumber > 0){
+$rownumber = mysql_num_rows($result);
+if($rownumber > 0){
 	while($row=mysql_fetch_array($result)){
 		echo $row['circles_name'];
-		
-		$addto_circles_name = $row['circles_name'];
+		$owner_id = $row['circles_name'];
+		// $addto_circles_name = $row['owner_id'];
 		echo "<a href='add_exec.php?addto_circles_name=$addto_circles_name&friend_id=$_GET[friend_id]'>  Add</a>";
 		
-// 	}
-// }
-// else{
-	// echo 'you dont have any circle, please create a circle.';
-	// echo "<a href='../circles/index.php?owner_id=$owner_id'>  Create a cirlce</a>";	
+		
+	}
+}
+else{
+	echo 'you dont have any circle, please create a circle.';
+		
 	echo "</br>";
 }
 
