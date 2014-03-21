@@ -5,7 +5,7 @@
 include('../db/connection.php');
 include('index.php');
 
-$friend_id = $_GET['friend_id'];
+// $friend_id = $_GET['friend_id'];
 $mem_id = $_SESSION['mem_id'];
 
 $data = mysql_query("SELECT * FROM circles WHERE owner_id = '$mem_id'");
@@ -15,13 +15,14 @@ while($datarow=mysql_fetch_array($data))
 	$owner_id = $datarow['owner_id'];
 }
 
-$result = mysql_query("SELECT * FROM circles WHERE owner_id = '$owner_id'");
+$result = mysql_query("SELECT * FROM circles WHERE owner_id = '$owner_id' group by circles_name");
 // $rownumber = mysql_num_rows($result);
 // if($rownumber > 0){
 	while($row=mysql_fetch_array($result)){
 		echo $row['circles_name'];
+		
 		$addto_circles_name = $row['circles_name'];
-		echo "<a href='add_exec.php?addto_circles_name=$addto_circles_name'>  Add</a>";
+		echo "<a href='add_exec.php?addto_circles_name=$addto_circles_name&friend_id=$_GET[friend_id]'>  Add</a>";
 		
 // 	}
 // }
