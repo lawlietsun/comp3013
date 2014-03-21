@@ -21,10 +21,10 @@ if($rownumber > 0){
 	while($row=mysql_fetch_array($result)){
 		echo $row['circles_name'];
 		$owner_id = $row['circles_name'];
-		// $addto_circles_name = $row['owner_id'];
+		$addto_circles_name = $row['owner_id'];
 		echo "<a href='add_exec.php?addto_circles_name=$addto_circles_name&friend_id=$_GET[friend_id]'>  Add</a>";
 		
-		
+		echo "</br>";
 	}
 }
 else{
