@@ -32,7 +32,7 @@ if(count($_POST)>0)
                 }
                 else
                 {
-                echo "<a href='addfriends.php?found_mem_id=$found_mem_id'>     Add a new friend</a>"."<br />";
+                echo "<a href='search_addfriends.php?found_mem_id=$found_mem_id'>     Add a new friend</a>"."<br />";
                 }
             }
         }

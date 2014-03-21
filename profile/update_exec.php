@@ -96,9 +96,4 @@ else{
 mysql_close($bd);
 
 
-
-
-
-
-
 ?>
