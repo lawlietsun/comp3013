@@ -14,7 +14,7 @@ $rownumber = mysql_num_rows($result);
 
 if($rownumber > 0)
 {
-    echo 'asdfasdfasdfasd';
+    echo 'this friend is already in this circle.';
 }
 else{
 	mysql_query("INSERT INTO circles(owner_id, friend_id, circles_name)VALUES('$mem_id', '$friend_id', '$addto_circles_name')");

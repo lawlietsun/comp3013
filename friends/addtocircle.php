@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <?php
 // session_start();
 
@@ -14,7 +14,10 @@ while($datarow=mysql_fetch_array($data))
 	$circles_name = $datarow['circles_name'];
 	$owner_id = $datarow['owner_id'];
 }
+?>
+<div class="add">
 
+<?php
 $result = mysql_query("SELECT * FROM circles WHERE owner_id = '$owner_id' group by circles_name");
 $rownumber = mysql_num_rows($result);
 if($rownumber > 0){
@@ -33,6 +36,11 @@ else{
 	echo "</br>";
 }
 
+?>
+
+</div>
+
+<?php
 // $result = mysql_query("SELECT * FROM circles WHERE friend_id = '$friend_id' and circles_name ='$circles_name'");
 // $rownumber = mysql_num_rows($result);
 

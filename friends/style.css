@@ -18,3 +18,11 @@
 a{
 	text-decoration: none;
 }
+
+.add{
+position: relative;
+margin-left: auto;
+margin-right: auto;
+left: 10px;
+top: -100px;
+}
