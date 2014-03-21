@@ -32,6 +32,7 @@ include('../db/connection.php');
 			<?php
 			$mem_id = $_SESSION['mem_id'];
 			echo "<a href='../circles/index.php?mem_id=$mem_id'>  Create a cirlce</a>";
+			echo "</br>";
 
 						// echo $mem_id;
 			$query=mysql_query("SELECT * from member where mem_id in (select friend_id from friend where mem_id = $mem_id)")or die(mysql_error());
